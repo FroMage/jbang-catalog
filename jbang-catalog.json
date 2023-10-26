@@ -1,0 +1,10 @@
+{
+  "catalogs": {},
+  "aliases": {
+    "static-init-finder": {
+      "script-ref": "ListStaticInit.java",
+      "description": "Find static init calls to classes"
+    }
+  },
+  "templates": {}
+}
