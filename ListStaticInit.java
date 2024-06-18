@@ -48,6 +48,13 @@ import io.smallrye.beanbag.maven.MavenFactory;
 class ListStaticInit { 
 
     public static void main(String[] args) throws SettingsBuildingException, ArtifactResolutionException, IOException, DependencyResolutionException {
+    	if(args.length != 2) {
+    		System.err.println("Usage: static-init-finder <groupId:artifactId:version> package-pattern");
+    		System.err.println("Where <groupId:artifactId:version> is a Maven coordinate to start scanning from");
+    		System.err.println("And package-pattern is a slash-separated package prefix to look for.");
+    		System.err.println("For example, you can look for 'java/awt' calls from static-init");
+    		System.exit(1);
+    	}
     	String dependency = args[0];
     	String pattern = args[1];
     	
